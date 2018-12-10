@@ -1,3 +1,4 @@
+import {Font} from 'expo';
 import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import ProfileItem from '../profile/components/ProfileItem';
@@ -17,14 +18,26 @@ getNavOptions = title => {
 
 export default class HomeScreen extends Component {
 
+    state = {
+        fontLoaded: false
+    }
+
     static navigationOptions = getNavOptions('Home');
 
     render() {
+        if (!this.state.fontLoaded) return null;
         return (
             <ScrollView>
                 {this.printProfiles(10)}
             </ScrollView>
         );
+    }
+
+    async componentDidMount() {
+        await Font.loadAsync({
+            'Arial': require('../fonts/Arial.ttf')
+        });
+        this.setState({ fontLoaded: true });
     }
 
     printProfiles = (n) => {

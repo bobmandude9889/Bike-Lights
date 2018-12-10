@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {StyleSheet, TouchableHighlight, Text, View, AppRegistry} from 'react-native';
+import {StyleSheet, TouchableHighlight, Text, View} from 'react-native';
 
 export default class ProfileItem extends Component {
-
+    
     onPress = () => {
         const {navigate} = this.props.navigation;
         navigate("ProfileDesigner");

@@ -1,27 +1,24 @@
 {
-  "name": "lights_t",
-  "version": "0.0.1",
-  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
   },
   "dependencies": {
-    "color-convert": "^1.9.3",
-    "react": "^16.6.3",
-    "react-native": "0.57.4",
+    "expo": "^31.0.2",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-canvas": "^0.1.24",
+    "react-native-color": "0.0.10",
     "react-native-fs": "^2.12.1",
     "react-native-gesture-handler": "^1.0.9",
-    "react-navigation": "^3.0.0"
+    "react-navigation": "^3.0.0",
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.49.0",
-    "react-test-renderer": "16.6.0-alpha.8af6728"
+    "babel-preset-expo": "^5.0.0"
   },
-  "jest": {
-    "preset": "react-native"
-  }
+  "private": true
 }
